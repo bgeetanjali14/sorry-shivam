@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sorry Shivam ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+.container{
+background:white;
+padding:40px;
+border-radius:20px;
+width:360px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+color:#ff4d6d;
+}
+
+p{
+color:#444;
+line-height:1.5;
+}
+
+button{
+margin-top:20px;
+padding:12px 20px;
+background:#ff4d6d;
+border:none;
+color:white;
+font-size:16px;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff1e4d;
+}
+
+img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.heart{
+position:absolute;
+color:white;
+font-size:20px;
+animation:float 6s infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh)}
+100%{transform:translateY(-10vh)}
+}
+
+@keyframes pop{
+0%{
+transform:scale(0);
+opacity:1;
+}
+50%{
+transform:scale(1.5);
+}
+100%{
+transform:scale(1);
+opacity:0;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="photo.jpg">
+
+<h1>I'm so so so so Sorry Shivam</h1>
+
+<p>
+I said things I never meant.<br><br>
+I wasn't just in good state and i said alll those stufff<br>
+You are not a burden to me.<br>
+You are my peace, my comfort and my baby. ❤️<br><br>
+
+I was angry and hurt but I never stopped loving you.<br>
+Please forgive your babyyyyyy>
+</p>
+
+<button onclick="forgive()">Please Forgive Me 🥺</button>
+
+<p id="msg"></p>
+
+</div>
+
+<audio autoplay loop>
+<source src="song.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+function forgive(){
+
+document.getElementById("msg").innerHTML =
+"I LOVE YOUUUU SOOOOO MUCHHHH MY BABYYYYY 🥺❤️<br><br>Now come hug me.";
+
+for(let i=0;i<60;i++){
+
+let heart=document.createElement("div");
+heart.innerHTML="❤️";
+heart.style.position="absolute";
+heart.style.left=Math.random()*100+"vw";
+heart.style.top=Math.random()*100+"vh";
+heart.style.fontSize=(20+Math.random()*30)+"px";
+heart.style.animation="pop 2s ease-out";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},2000);
+
+}
+
+}
+
+for(let i=0;i<20;i++){
+let heart=document.createElement("div");
+heart.innerHTML="❤️";
+heart.className="heart";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(3+Math.random()*5)+"s";
+document.body.appendChild(heart);
+}
+
+</script>
+
+</body>
+</html>
